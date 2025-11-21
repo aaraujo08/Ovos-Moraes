@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ovos Moraes | Distribuidora Clara e Gema</title>
+    <meta name="description" content="Ovos Moraes - Distribuidora da marca Clara e Gema em Carapicuíba e região. Ovos Vermelhos, Brancos, Extra e Jumbo.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS --- */
+        :root {
+            --navy-blue: #0F172A; 
+            --rich-gold: #D4AF37; 
+            --pure-white: #FFFFFF;
+            --light-gray: #F8FAFC;
+            --text-dark: #334155;
+            --soft-gray-bg: #f1f5f9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--pure-white);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--navy-blue);
+        }
+
+        a { text-decoration: none; }
+
+        /* --- BOTÕES --- */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--rich-gold);
+            color: var(--navy-blue);
+        }
+
+        .btn-primary:hover {
+            background-color: #b5952f;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--pure-white);
+            color: var(--pure-white);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--pure-white);
+            color: var(--navy-blue);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-container {
+             display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--rich-gold);
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-menu a {
+            color: var(--pure-white);
+            margin-left: 25px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover { color: var(--rich-gold); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--pure-white);
+            padding-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--pure-white);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero h1 span { color: var(--rich-gold); font-style: italic; }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        /* --- SEÇÃO EXCLUSIVA DA MARCA --- */
+        .brand-intro-section {
+            padding: 100px 0 60px 0;
+            background-color: var(--pure-white);
+            text-align: center;
+        }
+
+        .brand-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .brand-content h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+        
+        .brand-highlight {
+            color: var(--rich-gold);
+            font-weight: 700;
+        }
+        
+        .brand-content p.main-text {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+        }
+
+        .delivery-bar {
+            display: inline-block;
+            background: var(--soft-gray-bg);
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .delivery-bar i { color: var(--navy-blue); margin-right: 10px; }
+        .delivery-bar strong { color: var(--navy-blue); }
+
+
+        /* --- SEÇÃO GALERIA DE PRODUTOS --- */
+        .product-gallery-section {
+            padding: 60px 0 100px 0;
+            background-color: var(--soft-gray-bg);
+        }
+
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .gallery-item {
+            background: var(--pure-white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            border-bottom-color: var(--rich-gold);
+        }
+
+        .gallery-img-box {
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .gallery-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-img-box img {
+            transform: scale(1.05);
+        }
+
+        .gallery-info {
+            padding: 25px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .gallery-type-tag {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--rich-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .gallery-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--navy-blue);
+        }
+
+        .gallery-info p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+
+        /* --- SOBRE --- */
+        .about {
+            padding: 90px 0;
+            background-color: var(--pure-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .badge-years {
+            background: var(--navy-blue);
+            color: var(--rich-gold);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            background: var(--soft-gray-bg);
+            padding: 25px;
+            border-left: 4px solid var(--rich-gold);
+            margin-top: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box p { margin-bottom: 8px; font-size: 0.95rem; }
+        .info-box strong { color: var(--navy-blue); }
+
+        .logo-showcase {
+            background-color: var(--navy-blue);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid var(--rich-gold);
+            padding: 20px; /* Adicionado padding para a imagem não colar na borda */
+        }
+
+        /* NOVA CLASSE PARA A IMAGEM DO LOGO */
+        .brand-logo-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Garante que o logo se ajuste sem distorcer */
+        }
+        
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: var(--navy-blue);
+            color: #cbd5e1;
+            padding: 70px 0 20px;
+            font-size: 0.95rem;
+            border-top: 5px solid var(--rich-gold);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            color: var(--pure-white);
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 15px; display: flex; gap: 10px; }
+        .footer-col ul li i { color: var(--rich-gold); margin-top: 5px; }
+
+        .legal-line {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero { height: auto; min-height: 80vh; padding-top: 120px; padding-bottom: 60px; }
+            .brand-content h2 { font-size: 2.2rem; }
+            .delivery-bar { padding: 15px; font-size: 0.9rem; }
+            .about-grid { grid-template-columns: 1fr; }
+            .header-container { flex-direction: column; }
+            .nav-menu { margin-top: 15px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+            .nav-menu a { margin: 0; }
+            .btn-outline { margin: 15px 0 0 0; }
+            .logo-showcase { height: 300px; margin-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-egg"></i> OVOS MORAES
+            </div>
+            <nav class="nav-menu">
+                <a href="#inicio">Início</a>
+                <a href="#produtos-galeria">Nossos Ovos</a>
+                <a href="#sobre">A Empresa</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Qualidade que atravessa <br><span>gerações.</span></h1>
+            <p>Desde 2008 fornecendo ovos selecionados da marca <strong>Clara e Gema</strong>. Atendemos seu comércio com pontualidade e frescor garantido.</p>
+            <div>
+                <a href="https://wa.me/5511999999999" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Fazer Pedido</a>
+                <a href="#brand-intro" class="btn btn-outline">Conhecer Marca</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="brand-intro" class="brand-intro-section">
+        <div class="container brand-content">
+            <h2>Da Granja direto para sua Mesa com a qualidade <span class="brand-highlight">Clara e Gema</span></h2>
+            <p class="main-text">Trabalhamos exclusivamente com ovos selecionados da renomada marca Clara e Gema, reconhecida pela sua excelência, gemas vivas e cascas resistentes. Garantimos o abastecimento do seu negócio com produtos frescos direto da granja.</p>
+            
+            <div class="delivery-bar">
+                 <i class="fas fa-truck-fast"></i> Entregas semanais em <strong>Carapicuíba, Osasco, Itapevi e Jandira</strong>.
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos-galeria" class="product-gallery-section">
+        <div class="container">
+            <h2 class="gallery-title">Catálogo de Tipos</h2>
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <div class="gallery-img-box">
+                        <img src="https://drjulianopimentel.com.br/wp-content/uploads/2017/02/ovo-1024x683.jpg" alt="Tigela com ovos vermelhos frescos">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-type-tag">Tradicional</span>
+                        <h3>Ovo Extra Vermelho</h3>
+                        <p>O preferido das famílias brasileiras. Casca resistente e gema de coloração intensa. Ideal para mercados e padarias que buscam o padrão clássico.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-img-box">
+                        <img src="https://i.postimg.cc/5y3PRwzK/Gemini-Generated-Image-79z2w679z2w679z2.png" alt="Tigela de madeira com ovos brancos frescos e um quebrado">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-type-tag">Tamanho Médio</span>
+                        <h3>Ovo Extra Branco</h3>
+                        <p>O clássico ovo branco, tamanho médio (entre 53g e 59g). Ideal para todas as receitas, mantendo a qualidade e frescor Clara e Gema.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-img-box">
+                        <img src="https://i.postimg.cc/mrDMwH39/Gemini-Generated-Image-xgoo2fxgoo2fxgoo.png" alt="Ovos grandes com foco na qualidade">
+                    </div>
+                    <div class="gallery-info">
+                        <span class="gallery-type-tag">Tamanho Grande</span>
+                        <h3>JUMBO</h3>
+                        <p>Nossos maiores ovos (acima de 66g). Favoritos para quem busca fartura e impacto visual, frequentemente surpreendendo o cliente com duas gemas.</p>
+                    </div>
+                </div>
+
+               
+
+            </div> </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <span class="badge-years">DESDE 2008</span>
+                <h2>Compromisso e Tradição</h2>
+                <p>Nossa trajetória não começou apenas com números, mas com o sonho de um homem e o trabalho de suas mãos. Tudo teve início em 1998, na cidade de Assis, interior de São Paulo, fundado pelo visionário Jesus José de Moraes.
+
+Guiado por valores inegociáveis de honestidade e qualidade, ele plantou as sementes do que somos hoje. Em 2008, esse legado floresceu e ganhou novos horizontes quando seu filho, José Carlos de Moraes, assumiu a liderança.
+
+Honrando a tradição de "passar de geração para geração", trouxemos essa experiência para Vila Lourdes, em Carapicuíba. Hoje, a Ovos Moraes une a tradição do campo com a eficiência moderna, sendo referência na distribuição da marca Clara e Gema. Não entregamos apenas ovos; entregamos o respeito e a história da família Moraes para a sua mesa.<p>
+                
+                <div class="info-box">
+                    <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #999;">Dados da Empresa</p>
+                    <p><strong>Razão Social:</strong> Ovos Moraes Ltda</p>
+                    <p><strong>CNPJ:</strong> 10.242.419/0001-03</p>
+                    <p><strong>Sede:</strong> Vila Lourdes, Carapicuíba - SP</p>
+                </div>
+            </div>
+            
+            <div class="logo-showcase">
+                <img src="https://i.postimg.cc/JnHr7r8j/grande.jpg" alt="Logo Ovos Moraes - Ovo branco violinista de smoking azul" class="brand-logo-img">
+            </div>
+            </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>Ovos Moraes</h4>
+                <p>Referência em distribuição de ovos Clara e Gema em Carapicuíba e região. Pontualidade e respeito ao cliente.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contato Rápido</h4>
+                <ul>
+                    <li><i class="fab fa-whatsapp"></i> (11) 99707-7344</li> 
+                    <li><i class="fas fa-envelope"></i> ovosmoraes@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Localização da Sede</h4>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>
+                            Avenida Victório Fornazaro, 2415<br>
+                            Vila Sul Americana<br>
+                            Carapicuíba - SP<br>
+                            CEP: 06397-000
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="legal-line">
+            <p>&copy; 2025 Ovos Moraes Ltda. Todos os direitos reservados. CNPJ: 10.242.419/0001-03</p>
+        </div>
+    </footer>
+
+</body>
+</html>
