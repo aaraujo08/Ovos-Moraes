@@ -23,6 +23,8 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Lato', sans-serif;
             color: var(--text-dark);
@@ -321,14 +323,13 @@
             justify-content: center;
             text-align: center;
             border: 1px solid var(--rich-gold);
-            padding: 20px; /* Adicionado padding para a imagem não colar na borda */
+            padding: 20px;
         }
 
-        /* NOVA CLASSE PARA A IMAGEM DO LOGO */
         .brand-logo-img {
             max-width: 100%;
             max-height: 100%;
-            object-fit: contain; /* Garante que o logo se ajuste sem distorcer */
+            object-fit: contain;
         }
         
         /* --- RODAPÉ --- */
@@ -402,7 +403,7 @@
             <h1>Qualidade que atravessa <br><span>gerações.</span></h1>
             <p>Desde 2008 fornecendo ovos selecionados da marca <strong>Clara e Gema</strong>. Atendemos seu comércio com pontualidade e frescor garantido.</p>
             <div>
-                <a href="https://wa.me/5511999999999" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Fazer Pedido</a>
+                <a href="https://wa.me/5511997077344" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Fazer Pedido</a>
                 <a href="#brand-intro" class="btn btn-outline">Conhecer Marca</a>
             </div>
         </div>
@@ -411,117 +412,4 @@
     <section id="brand-intro" class="brand-intro-section">
         <div class="container brand-content">
             <h2>Da Granja direto para sua Mesa com a qualidade <span class="brand-highlight">Clara e Gema</span></h2>
-            <p class="main-text">Trabalhamos exclusivamente com ovos selecionados da renomada marca Clara e Gema, reconhecida pela sua excelência, gemas vivas e cascas resistentes. Garantimos o abastecimento do seu negócio com produtos frescos direto da granja.</p>
-            
-            <div class="delivery-bar">
-                 <i class="fas fa-truck-fast"></i> Entregas semanais em <strong>Carapicuíba, Osasco, Itapevi e Jandira</strong>.
-            </div>
-        </div>
-    </section>
-
-    <section id="produtos-galeria" class="product-gallery-section">
-        <div class="container">
-            <h2 class="gallery-title">Catálogo de Tipos</h2>
-            <div class="gallery-grid">
-                
-                <div class="gallery-item">
-                    <div class="gallery-img-box">
-                        <img src="https://drjulianopimentel.com.br/wp-content/uploads/2017/02/ovo-1024x683.jpg" alt="Tigela com ovos vermelhos frescos">
-                    </div>
-                    <div class="gallery-info">
-                        <span class="gallery-type-tag">Tradicional</span>
-                        <h3>Ovo Extra Vermelho</h3>
-                        <p>O preferido das famílias brasileiras. Casca resistente e gema de coloração intensa. Ideal para mercados e padarias que buscam o padrão clássico.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-img-box">
-                        <img src="https://i.postimg.cc/5y3PRwzK/Gemini-Generated-Image-79z2w679z2w679z2.png" alt="Tigela de madeira com ovos brancos frescos e um quebrado">
-                    </div>
-                    <div class="gallery-info">
-                        <span class="gallery-type-tag">Tamanho Médio</span>
-                        <h3>Ovo Extra Branco</h3>
-                        <p>O clássico ovo branco, tamanho médio (entre 53g e 59g). Ideal para todas as receitas, mantendo a qualidade e frescor Clara e Gema.</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <div class="gallery-img-box">
-                        <img src="https://i.postimg.cc/mrDMwH39/Gemini-Generated-Image-xgoo2fxgoo2fxgoo.png" alt="Ovos grandes com foco na qualidade">
-                    </div>
-                    <div class="gallery-info">
-                        <span class="gallery-type-tag">Tamanho Grande</span>
-                        <h3>JUMBO</h3>
-                        <p>Nossos maiores ovos (acima de 66g). Favoritos para quem busca fartura e impacto visual, frequentemente surpreendendo o cliente com duas gemas.</p>
-                    </div>
-                </div>
-
-               
-
-            </div> </div>
-    </section>
-
-    <section id="sobre" class="about">
-        <div class="container about-grid">
-            <div class="about-text">
-                <span class="badge-years">DESDE 2008</span>
-                <h2>Compromisso e Tradição</h2>
-                <p>Nossa trajetória não começou apenas com números, mas com o sonho de um homem e o trabalho de suas mãos. Tudo teve início em 1998, na cidade de Assis, interior de São Paulo, fundado pelo visionário Jesus José de Moraes.
-
-Guiado por valores inegociáveis de honestidade e qualidade, ele plantou as sementes do que somos hoje. Em 2008, esse legado floresceu e ganhou novos horizontes quando seu filho, José Carlos de Moraes, assumiu a liderança.
-
-Honrando a tradição de "passar de geração para geração", trouxemos essa experiência para Vila Lourdes, em Carapicuíba. Hoje, a Ovos Moraes une a tradição do campo com a eficiência moderna, sendo referência na distribuição da marca Clara e Gema. Não entregamos apenas ovos; entregamos o respeito e a história da família Moraes para a sua mesa.<p>
-                
-                <div class="info-box">
-                    <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #999;">Dados da Empresa</p>
-                    <p><strong>Razão Social:</strong> Ovos Moraes Ltda</p>
-                    <p><strong>CNPJ:</strong> 10.242.419/0001-03</p>
-                    <p><strong>Sede:</strong> Vila Lourdes, Carapicuíba - SP</p>
-                </div>
-            </div>
-            
-            <div class="logo-showcase">
-                <img src="https://i.postimg.cc/JnHr7r8j/grande.jpg" alt="Logo Ovos Moraes - Ovo branco violinista de smoking azul" class="brand-logo-img">
-            </div>
-            </div>
-    </section>
-
-    <footer id="contato">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h4>Ovos Moraes</h4>
-                <p>Referência em distribuição de ovos Clara e Gema em Carapicuíba e região. Pontualidade e respeito ao cliente.</p>
-            </div>
-            
-            <div class="footer-col">
-                <h4>Contato Rápido</h4>
-                <ul>
-                    <li><i class="fab fa-whatsapp"></i> (11) 99707-7344</li> 
-                    <li><i class="fas fa-envelope"></i> ovosmoraes@gmail.com</li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4>Localização da Sede</h4>
-                <ul>
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>
-                            Avenida Victório Fornazaro, 2415<br>
-                            Vila Sul Americana<br>
-                            Carapicuíba - SP<br>
-                            CEP: 06397-000
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="legal-line">
-            <p>&copy; 2025 Ovos Moraes Ltda. Todos os direitos reservados. CNPJ: 10.242.419/0001-03</p>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <p class="
